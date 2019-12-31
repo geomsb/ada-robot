@@ -1,0 +1,40 @@
+What is Ada?
+Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. We focus on serving low income people, underrepresented minorities, and members of the LGBTQIA+ community.
+
+Location or address
+Ada Developers Academy, 1215 4th Ave, Suite 1050 Seattle, WA 98161
+
+Organization
+Mision
+Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. We focus on serving low income people, underrepresented minorities, and members of the LGBTQIA+ community.
+Ada develops software engineers who are skilled, confident, and work-tested; our graduates are experienced in practical, team-based software development and learning new technology rapidly.
+Diverse teams create more effective work cultures and innovative products. Ada advocates for and supports our students, alums, and partners to build healthy, equitable environments and a more inclusive tech industry.
+
+Program
+Our highly immersive, tuition-free program combines classroom training and a paid, learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career). Our core values are building and contributing to a supportive community; creating and advocating for inclusivity; and teaching and practicing lifelong learning, all within the tech industry.
+
+Inclusivity
+Students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience. We strive to make Ada an inclusive, safe, and equitable space for every member of our community. We recognize and celebrate difference along many axes including, but not limited to, sexual orientation, gender identity and presentation, age, race, ethnicity, class, religion, physical appearance, ability, national origin, educational background, and parental status. All women and gender diverse* people are encouraged to apply.
+Here at Ada, we’ve chosen to use the term “gender diverse” to represent as large a range of gender identities as possible. We acknowledge that this vocabulary is inherently imperfect, and is continually evolving. Our community includes people who also identify as trans, non-binary, gender queer, gender fluid, and gender non-conforming.
+
+The State of Tech
+While women are a significant audience for tech innovation — 56% of the professional workforce, 55% of social media users, and 60% of social gamers — less than 25% of software developers are women.
+Women of color are more severely underrepresented: 3% of female software developers are Black, 2% are Hispanic/Latinx, and 5% are Asian.
+In addition, women are not getting promoted as often or as quickly as men and they are leaving the workforce in higher numbers. According to a 2015 survey done by the National Center for Women in Technology (NCWIT), 31% of women feel stuck and unsupported in their careers, and 56% of women quit their jobs by mid-career, within 10 years. Furthermore, only 11% of executive positions in tech are held by women.
+
+Why Ada Started
+Elise Worthy partnered with Scott Case who was frustrated at the difficulty of hiring a diverse group of software developers. Together they co-founded Ada Developers Academy in 2013, initially as a project of the Technology Alliance, with the following key principles: the program would be tuition-free to attract and retain the highest potential students regardless of financial means; a six-month immersion curriculum that was far deeper than other “boot camp” programs to better prepare students for developer jobs; and integrating a five-month internship into the program to facilitate the transition into the workforce.  
+One of Ada’s most unique attributes is the fact that it is tuition-free. 
+
+Growing a Community
+The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech.
+In its first year in 2013, Ada supported 16 students.  Although we were a tuition-free program, we still observed barriers for our students to attend the program.  In response, we developed the Ada Loan Fund, a low-interest loan program collateralized in special partnership with Craft 3 to support student living costs during the classroom portion of the program.  
+By Cohort 3 in 2015, Ada became a project of fiscal sponsor TSNE Mission Works based in Boston, Massachusetts, to support our organizational growth. 
+In 2016, Ada realized the need to develop a program that met the intersectionality of our students’ identities to succeed in the tech industry. This resulted in changing our practices around admissions and programming to create a holistically inclusive learning environment.  In Cohort 6, Ada expanded from 24 to 48 students per cohort. In 2016, Ada became the recipient of the TechHire grant, a Department of Labor initiative aimed to fill the growing number of open tech jobs.  
+Ada’s curriculum has always been focused on full-stack web development with Ruby on Rails and JavaScript, and students have found this combination highly effective both in the classroom and after graduation. While these core pillars of our curriculum have served us well, we’re always making tweaks and changes, both to reflect the constantly changing technology landscape and to better meet the needs of our students and partner companies.
+In 2017 we brought our JavaScript unit up to date with the ES6 standard, and added Flexbox and Grid to our discussion of CSS. In 2018 we introduced ReactJS to our JavaScript unit. Our instructional team continues to keep a close eye on trends in industry, and we are committed to keeping our curriculum relevant and effective as we move forward.  
+Today, Ada graduates 48 Adies (our students and graduates are lovingly referred to as Adies!) per cohort twice a year.  To date, Ada Developers Academy has created $24M in new salaries in the tech industry generated by 333 women and gender diverse software developers.  As we look ahead we are excited to expand our services and share our impact. Ada will focus our efforts on the following pillars for growth in the next two years: 
+Serving Low-Income, Underrepresented Minorities, and LGBTQIA+ Adults 
+Developing and expanding Alumni Support & Programming
+Facilities Expansion for Increased Impact   
+
