@@ -1,12 +1,15 @@
-What is Ada?
+What is Ada Developers Academy
 Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. We focus on serving low income people, underrepresented minorities, and members of the LGBTQIA+ community.
 
-Location or address
-Ada Developers Academy, 1215 4th Ave, Suite 1050 Seattle, WA 98161
+Location
+The location of Ada Developers Academy is 1215 4th Ave, Suite 1050 Seattle, WA 98161.
 
-Mision
+Mission
+The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech. Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults.
+
+Backpack
 Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. 
-The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech.
+The backpack of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech.
 
 Program
 Our highly immersive, tuition-free program combines classroom training and a paid, learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career). 
@@ -15,9 +18,6 @@ One of Ada’s most unique attributes is the fact that it is tuition-free.
 Inclusivity
 Students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience. 
 
-Why Ada Started
-Elise Worthy partnered with Scott Case who was frustrated at the difficulty of hiring a diverse group of software developers. Together they co-founded Ada Developers Academy in 2013. 
- 
 Who was Ada Lovelace
 Augusta Ada Lovelace, the 19th century mathematician who is considered the founder of computer science.
 
@@ -52,8 +52,5 @@ Financial support
 For students who need assistance covering their living expenses during the Ada classroom portion, we offer a low-interest loan through our lending partner, Craft3.
 
 Donate
-You can donate at the website or by mail. 
-
-Donate by Mail
-Please make checks payable to: TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670
+You can donate at the website or by mail, please make checks payable to: TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670
 
