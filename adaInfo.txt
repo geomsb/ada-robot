@@ -1,56 +1,25 @@
-What is Ada Developers Academy
-Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. We focus on serving low income people, underrepresented minorities, and members of the LGBTQIA+ community.
+The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech, Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults.
 
-Location
-The location of Ada Developers Academy is 1215 4th Ave, Suite 1050 Seattle, WA 98161.
+The program combines classroom training and a paid learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career). 
 
-Mission
-The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech. Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults.
+Our inclusivity is showed on students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience. 
 
-Backpack
-Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults. 
-The backpack of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech.
+Augusta Ada Lovelace was a 19th-century mathematician and she is considered the founder of computer science.
 
-Program
-Our highly immersive, tuition-free program combines classroom training and a paid, learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career). 
-One of Ada’s most unique attributes is the fact that it is tuition-free.
+The Jump Start Live is for students who need extra support and it starts one month before the classes start and the Jump Start Curriculum must be completed by our students prior to their first day at Ada the content covers foundational concepts such as the basics of coding languages and getting comfortable with tools.
 
-Inclusivity
-Students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience. 
+The classroom experience consists of 8 hours a day, 5 days a week for 24 weeks, the curriculum is divided up into one-week units, and each week features a project that reinforces that week’s learning objectives.
 
-Who was Ada Lovelace
-Augusta Ada Lovelace, the 19th century mathematician who is considered the founder of computer science.
+A capstone project is created by or students in order to show what they have learned.
 
-Jump Start
-All students are asked to complete our Jump Start curriculum prior to their first day at Ada. The content covers foundational concepts such as the basics of coding languages and getting comfortable with tools.
+The advocacy of the program includes workshops focused on justice, bias intervention, and inclusive community therefore our Adies are not only trained to be strong developers but also strong advocates.
 
-Jump Start Live
-Students who need extra support participate in Jump Start Live, an in-person classroom experience one month before the program starts.
+The internship will be performed during the second part of the course, students will participate in an interview week where they will interview with six companies and they will be placed with one of the companies.
 
-Classroom experience
-Students are in the Ada classroom 8 hours a day, 5 days a week for 24 weeks. The curriculum is divided up into one-week units, and each week features a project that reinforces that week’s learning objectives.
+You can apply if you have permanent work authorization in the United States and if you are able to participate for the full duration of the program, which is full-time, Monday through Friday.
 
-Capstone
-As a culmination of each student’s classroom learning experience, they create a Capstone project to showcase what they have learned thus far in the program.
+The application window opens approximately six months prior to the start of the cohort for about a three-week duration, it includes 4 parts: online application, code challenge, technical interview, and in-person/virtual interview, all phases after the application are by invitation only.
 
-Advocacy
-Adies are not only trained to be strong developers but also strong advocates. Students participate in a series of workshops focused on justice, bias intervention, and inclusive community.
+There is financial support for students who need assistance covering their living expenses during the Ada lectures portion, we offer a low-interest loan through our lending partner, Craft3.
 
-Internships
-During the latter part of the classroom portion, students will participate in an interview week where they will interview with six companies. Students will be placed with one of the companies for their internship.
-
-Who can apply
-You have permanent work authorization in the United States and you are able to participate for the full duration of the program, which is full-time, Monday through Friday.
-
-Timeline
-Cohorts start twice a year, in September and February. The application window opens approximately six months prior to the start of the cohort for about a three-week duration.
-
-Aplication Process
-The application process includes 4 parts: online application, code challenge, technical interview, and in-person/virtual interview. All phases after the application are by invitation only.
-
-Financial support
-For students who need assistance covering their living expenses during the Ada classroom portion, we offer a low-interest loan through our lending partner, Craft3.
-
-Donate
-You can donate at the website or by mail, please make checks payable to: TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670
-
+You can donate at the website or by mail, please make checks payable to TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670
