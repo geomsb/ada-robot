@@ -17,7 +17,7 @@ pip install nltk
 NumPy is the fundamental package for scientific computing with Python.
 
 ```
-python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 ```
 
 ### Instalation of Scikit-learn
@@ -29,7 +29,7 @@ pip install -U scikit-learn
 ### Instalation of Azure Cognitive Services
 Ada Robot uses the Text to Speech and Speech to text Azure Services.
 ```
-pip install --upgrade azure-cognitiveservices-speech
+pip3 install --upgrade azure-cognitiveservices-speech
 ```
 
 ### Get a key from the Azure Cognitive Services
@@ -39,9 +39,15 @@ pip install --upgrade azure-cognitiveservices-speech
 
 https://azure.microsoft.com/en-us/free/
 
+### Instalation of Request
+Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. 
+```
+pip install requests
+```
+
 ### Installing required packages
 After NLTK has been downloaded, install required packages
-```
+```python
 import nltk
 from nltk.stem import WordNetLemmatizer
 nltk.download('popular', quiet=True) # for downloading popular packages

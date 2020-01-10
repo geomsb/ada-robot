@@ -12,18 +12,39 @@ from nltk.stem import WordNetLemmatizer
 import azure.cognitiveservices.speech as speechsdk
 import os
 from dotenv import load_dotenv
-import azure.cognitiveservices.speech as speechsdk
+import requests
+import json
 
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
 region = os.getenv("SERVICE_REGION")
+subscription_key = os.getenv("SUBSCRIPTION_KEY")
 
 speech_config = speechsdk.SpeechConfig(subscription=key, region=region)
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
+assert subscription_key
 
 with open('adaInfo.txt','r', encoding='utf8', errors ='ignore') as adaInfo:
     adaText = adaInfo.read().lower()
+
+face_api_url = 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect'
+
+image_url = 'img/geomsb.jpeg'
+
+headers = {'Ocp-Apim-Subscription-Key': subscription_key, 'Content-Type': 'application/octet-stream'}
+
+params = {
+    'returnFaceId': 'true',
+    'returnFaceLandmarks': 'false',
+    'returnFaceAttributes': 'age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise',
+}
+
+data = open('img/geomsb.jpeg', 'rb').read()
+
+response = requests.post(face_api_url, params=params,
+                        headers=headers, data=data)
+print(json.dumps(response.json()))
 
 #Tokens
 sent_tokens = nltk.sent_tokenize(adaText)# converts to list of sentences 
@@ -62,10 +83,10 @@ def response(user_response):
     flat.sort()
     req_tfidf = flat[-2]
     if(req_tfidf==0):
-        ada_response = ada_response + "I am sorry! I don't understand you"
+        ada_response = ada_response + "I am sorry! I can't help you with that question try to ask me about the mission, inclusivity, Jump Start, etc."
         # Synthesizes the received text to speech.
         # The synthesized speech is expected to be heard on the speaker with this line executed.
-        return speech_synthesizer.speak_text_async(ada_response + "I am sorry! I don't understand you").get()
+        return speech_synthesizer.speak_text_async(ada_response + "I am sorry! I can't help you with that question try to ask me about the mission, inclusivity, Jump Start, etc.").get()
     else:
         ada_response = ada_response + sent_tokens[idx]
         # Synthesizes the received text to speech.
