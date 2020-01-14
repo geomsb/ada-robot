@@ -14,6 +14,15 @@ import os
 from dotenv import load_dotenv
 import requests
 import json
+import cv2
+
+cap = cv2.VideoCapture(0)
+ret, frame = cap.read()
+cap.release()
+name = '/Users/georginasanchez/repos/Ada/ada-robot/img/geomsb.jpeg'
+picture = frame.copy()
+cv2.imwrite(name, frame)
+
 
 load_dotenv()
 
@@ -23,7 +32,7 @@ subscription_key = os.getenv("SUBSCRIPTION_KEY")
 
 speech_config = speechsdk.SpeechConfig(subscription=key, region=region)
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
-assert subscription_key
+# assert subscription_key
 
 with open('adaInfo.txt','r', encoding='utf8', errors ='ignore') as adaInfo:
     adaText = adaInfo.read().lower()

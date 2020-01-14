@@ -1,7 +1,7 @@
 ## Pre-requisites
 ### Installation of Python
 ```
-$ brew install python
+brew install python
 ```
 
 **NLTK (Natural Language Toolkit)**
@@ -43,6 +43,12 @@ https://azure.microsoft.com/en-us/free/
 Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. 
 ```
 pip install requests
+```
+
+### Instalation of SimpleCV
+Framework for computer (machine) vision in Python, providing a unified, pythonic interface to image aquisition, conversion, manipulation, and feature extraction.
+```
+python3 -m pip install -U pygame --user
 ```
 
 ### Installing required packages
