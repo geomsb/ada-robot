@@ -23,7 +23,6 @@ name = '/Users/georginasanchez/repos/Ada/ada-robot/img/geomsb.jpeg'
 picture = frame.copy()
 cv2.imwrite(name, frame)
 
-
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
@@ -32,7 +31,6 @@ subscription_key = os.getenv("SUBSCRIPTION_KEY")
 
 speech_config = speechsdk.SpeechConfig(subscription=key, region=region)
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
-# assert subscription_key
 
 with open('adaInfo.txt','r', encoding='utf8', errors ='ignore') as adaInfo:
     adaText = adaInfo.read().lower()
@@ -44,16 +42,15 @@ image_url = 'img/geomsb.jpeg'
 headers = {'Ocp-Apim-Subscription-Key': subscription_key, 'Content-Type': 'application/octet-stream'}
 
 params = {
-    'returnFaceId': 'true',
-    'returnFaceLandmarks': 'false',
-    'returnFaceAttributes': 'age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise',
+    'returnFaceAttributes': 'age,glasses,emotion,hair,makeup,accessories',
 }
 
 data = open('img/geomsb.jpeg', 'rb').read()
 
-response = requests.post(face_api_url, params=params,
+api_response = requests.post(face_api_url, params=params,
                         headers=headers, data=data)
-print(json.dumps(response.json()))
+info = api_response.json()
+print(info[0]["faceAttributes"])
 
 #Tokens
 sent_tokens = nltk.sent_tokenize(adaText)# converts to list of sentences 
@@ -71,14 +68,6 @@ def LemNormalize(text):
 # Creates a speech synthesizer using the default speaker as audio output.
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
 
-# Keyword Matching
-GREETING_INPUTS = ("hello.", "hi.", "greetings.", "sup.", "what's up.","hey.",)
-GREETING_RESPONSES = ["hi", "hey", "hi there", "hello"]
-
-def greeting(sentence):
-    for word in sentence.split():
-        if word.lower() in GREETING_INPUTS:
-            return random.choice(GREETING_RESPONSES)
 
 # Generating response
 def response(user_response):
@@ -95,7 +84,7 @@ def response(user_response):
         ada_response = ada_response + "I am sorry! I can't help you with that question try to ask me about the mission, inclusivity, Jump Start, etc."
         # Synthesizes the received text to speech.
         # The synthesized speech is expected to be heard on the speaker with this line executed.
-        return speech_synthesizer.speak_text_async(ada_response + "I am sorry! I can't help you with that question try to ask me about the mission, inclusivity, Jump Start, etc.").get()
+        return speech_synthesizer.speak_text_async(ada_response).get()
     else:
         ada_response = ada_response + sent_tokens[idx]
         # Synthesizes the received text to speech.
@@ -108,16 +97,16 @@ while(i==True):
     user_input = speech_recognizer.recognize_once()
     user_response = user_input.text
     user_response = user_response.lower()
+    print(user_response)
     if(user_response!='bye.'):
         if(user_response=='thanks.' or user_response=='thank you.'):
             i=False
             result = speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
+        elif(user_response=='how old am i?'):
+            result = speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + "you look very young!").get()
         else:
-            if(greeting(user_response)!=None):
-                result = speech_synthesizer.speak_text_async(greeting(user_response)).get()
-            else:
-                response(user_response)
-                sent_tokens.remove(user_response)
+            response(user_response)
+            sent_tokens.remove(user_response)
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
