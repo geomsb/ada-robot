@@ -54,8 +54,8 @@ print(info[0]["faceAttributes"])
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
 
 
-def create_response(user_response):
-    with open('adaInfo.txt','r', encoding='utf8', errors ='ignore') as adaInfo:
+def create_response(user_response, text):
+    with open(text,'r', encoding='utf8', errors ='ignore') as adaInfo:
         adaText = adaInfo.read().lower()
 
     #Tokens
@@ -106,7 +106,7 @@ while(i==True):
         elif (user_response.split(',')=='how old am i?'):
             result = speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + "you look very young!").get()
         else:
-            idx, response_text = create_response(user_response)
+            idx, response_text = create_response(user_response, 'adaInfo.txt')
             # Synthesizes the received text to speech.
             # The synthesized speech is expected to be heard on the speaker with this line executed.
             speech_synthesizer.speak_text_async(response_text).get()
