@@ -1,5 +1,5 @@
 ## Pre-requisites
-### Installation of Python
+### Instalation of Python
 ```
 brew install python
 ```
@@ -57,7 +57,7 @@ Ada robot uses this library to answer questions if it does not find them with th
 pip install wolframalpha
 ```
 
-### Installing required packages
+### Instalation of required packages
 After NLTK has been downloaded, install required packages
 ```python
 import nltk
