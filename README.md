@@ -8,7 +8,7 @@ brew install python
 
 NLTK was a platform used to create Ada Robot. It provides a lot of text processing libraries that helped with the tokenization, lemmatization, etc.
 
-### Installation of NLTK
+### Instalation of NLTK
 ```
 pip install nltk
 ```
