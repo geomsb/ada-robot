@@ -29,7 +29,7 @@ pip install -U scikit-learn
 ### Instalation of Azure Cognitive Services
 Ada Robot uses the Text to Speech and Speech to text Azure Services.
 ```
-pip3 install --upgrade azure-cognitiveservices-speech
+pip install --upgrade azure-cognitiveservices-speech
 ```
 
 ### Get a key from the Azure Cognitive Services
@@ -45,10 +45,16 @@ Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the ne
 pip install requests
 ```
 
-### Instalation of SimpleCV
-Framework for computer (machine) vision in Python, providing a unified, pythonic interface to image aquisition, conversion, manipulation, and feature extraction.
+### Instalation of OpenCV
+Ada robot uses this library to capture an image from the webcam.
 ```
-python3 -m pip install -U pygame --user
+pip install opencv-python
+```
+
+### Instalation of Wolframalpha
+Ada robot uses this library to answer questions if it does not find them with the chatbot process.
+```
+pip install wolframalpha
 ```
 
 ### Installing required packages
