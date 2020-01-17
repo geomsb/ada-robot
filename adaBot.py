@@ -29,6 +29,46 @@ speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
 # Creates a speech synthesizer using the default speaker as audio output.
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
 
+def non_ada_response():
+    idx, response_text = create_response(user_response, 'userQuestions.txt')
+    if(idx != -1):
+        take_picture()
+        info = process_picture()
+        print(info)
+    if(idx == 0):
+        speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + "you look very young!").get()
+    elif(idx == 1):
+      if(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]) and info[0]["faceAttributes"]["makeup"]["eyeMakeup"]:
+          speech_synthesizer.speak_text_async("your eye makeup and lipstick are lovely!")
+      elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]):
+          speech_synthesizer.speak_text_async("your eye makeup is wonderful!")
+      elif(info[0]["faceAttributes"]["makeup"]["lipstick"]):
+          speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
+      else:
+          speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
+    elif(idx == 2):
+      if(info[0]["faceAttributes"]["accessories"]):
+          speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
+      else:
+        speech_synthesizer.speak_text_async("I am sorry! I can't help you with that question. Try to ask me about the mission, inclusivity, Jump Start, etc.").get()
+    elif(idx == 3):
+        max_emotion = Keymax = max(info[0]["faceAttributes"]["emotion"], key=info[0]["faceAttributes"]["emotion"].get)
+        emotions = { "anger": "angry","contempt": "contempty", "disgust": "disgusty","fear": "scared", "happiness": "happy", "neutral": "neutral", "sadness": "sad", "surprise": "surprised"} 
+        speech_synthesizer.speak_text_async("you are " + emotions[max_emotion]).get()
+    else:
+      answer = misc_question(user_response)
+      print(answer)
+      speech_synthesizer.speak_text_async(answer).get()
+
+def general_response():
+    idx, response_text = create_response(user_response, 'adaInfo.txt')
+    if(idx == -1):
+        non_ada_response()
+    else:
+        # Synthesizes the received text to speech.
+        # The synthesized speech is expected to be heard on the speaker with this line executed.
+        speech_synthesizer.speak_text_async(response_text).get()
+
 i=True
 result = speech_synthesizer.speak_text_async("My name is AdaRobot and my pronouns are she and her. I will answer your questions about Ada Developers Academy. If you want to exit, say thanks or thank you").get()
 while(i==True):
@@ -40,41 +80,7 @@ while(i==True):
             i=False
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
         else:
-            idx, response_text = create_response(user_response, 'adaInfo.txt')
-            if(idx == -1):
-                idx, response_text = create_response(user_response, 'userQuestions.txt')
-                if(idx != -1):
-                    take_picture()
-                    info = process_picture()
-                    print(info)
-                if(idx == 0):
-                    speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + "you look very young!").get()
-                elif(idx == 1):
-                  if(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]) and info[0]["faceAttributes"]["makeup"]["eyeMakeup"]:
-                      speech_synthesizer.speak_text_async("your eye makeup and lipstick are lovely!")
-                  elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]):
-                      speech_synthesizer.speak_text_async("your eye makeup is wonderful!")
-                  elif(info[0]["faceAttributes"]["makeup"]["lipstick"]):
-                      speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
-                  else:
-                      speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
-                elif(idx == 2):
-                  if(info[0]["faceAttributes"]["accessories"]):
-                      speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
-                  else:
-                    speech_synthesizer.speak_text_async("I am sorry! I can't help you with that question. Try to ask me about the mission, inclusivity, Jump Start, etc.").get()
-                elif(idx == 3):
-                    max_emotion = Keymax = max(info[0]["faceAttributes"]["emotion"], key=info[0]["faceAttributes"]["emotion"].get)
-                    emotions = { "anger": "angry","contempt": "contempty", "disgust": "disgusty","fear": "scared", "happiness": "happy", "neutral": "neutral", "sadness": "sad", "surprise": "surprised"} 
-                    speech_synthesizer.speak_text_async("you are " + emotions[max_emotion]).get()
-                else:
-                  answer = misc_question(user_response)
-                  print(answer)
-                  speech_synthesizer.speak_text_async(answer).get()
-            else:
-                # Synthesizes the received text to speech.
-                # The synthesized speech is expected to be heard on the speaker with this line executed.
-                speech_synthesizer.speak_text_async(response_text).get()
+            general_response() 
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
