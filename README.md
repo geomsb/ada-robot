@@ -10,26 +10,26 @@ NLTK was a platform used to create Ada Robot. It provides a lot of text processi
 
 ### Instalation of NLTK
 ```
-pip install nltk
+pip3 install nltk
 ```
 
 ### Instalation of NumPy
 NumPy is the fundamental package for scientific computing with Python.
 
 ```
-pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 ```
 
 ### Instalation of Scikit-learn
 Scikit-learn is a Python module for machine learning.
 ```
-pip install -U scikit-learn
+pip3 install -U scikit-learn
 ```
 
 ### Instalation of Azure Cognitive Services
 Ada Robot uses the Text to Speech and Speech to text Azure Services.
 ```
-pip install --upgrade azure-cognitiveservices-speech
+pip3 install --upgrade azure-cognitiveservices-speech
 ```
 
 ### Get a key from the Azure Cognitive Services
@@ -42,19 +42,19 @@ https://azure.microsoft.com/en-us/free/
 ### Instalation of Request
 Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. 
 ```
-pip install requests
+pip3 install requests
 ```
 
 ### Instalation of OpenCV
 Ada robot uses this library to capture an image from the webcam.
 ```
-pip install opencv-python
+pip3 install opencv-python
 ```
 
 ### Instalation of Wolframalpha
 Ada robot uses this library to answer questions if it does not find them with the chatbot process.
 ```
-pip install wolframalpha
+pip3 install wolframalpha
 ```
 
 ### Instalation of required packages
