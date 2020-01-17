@@ -16,6 +16,7 @@ import json
 import cv2
 from chatBot import create_response
 from pictureProcess import take_picture, process_picture
+from miscQuestions import misc_question
 
 load_dotenv()
 
@@ -41,10 +42,11 @@ while(i==True):
         else:
             idx, response_text = create_response(user_response, 'adaInfo.txt')
             if(idx == -1):
-                take_picture()
-                info = process_picture()
-                print(info)
                 idx, response_text = create_response(user_response, 'userQuestions.txt')
+                if(idx != -1):
+                    take_picture()
+                    info = process_picture()
+                    print(info)
                 if(idx == 0):
                     speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + "you look very young!").get()
                 elif(idx == 1):
@@ -56,17 +58,19 @@ while(i==True):
                       speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
                   else:
                       speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
-                elif (idx == 2):
-                  if (info[0]["faceAttributes"]["accessories"]):
+                elif(idx == 2):
+                  if(info[0]["faceAttributes"]["accessories"]):
                       speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
                   else:
                     speech_synthesizer.speak_text_async("I am sorry! I can't help you with that question. Try to ask me about the mission, inclusivity, Jump Start, etc.").get()
-                elif (idx == 3):
-                  max_emotion = Keymax = max(info[0]["faceAttributes"]["emotion"], key=info[0]["faceAttributes"]["emotion"].get)
-                  emotions = { "anger": "angry","contempt": "contempty", "disgust": "disgusty","fear": "scared", "happiness": "happy", "neutral": "neutral", "sadness": "sad", "surprise": "surprised"} 
-                  speech_synthesizer.speak_text_async("you are " + emotions[max_emotion]).get()
+                elif(idx == 3):
+                    max_emotion = Keymax = max(info[0]["faceAttributes"]["emotion"], key=info[0]["faceAttributes"]["emotion"].get)
+                    emotions = { "anger": "angry","contempt": "contempty", "disgust": "disgusty","fear": "scared", "happiness": "happy", "neutral": "neutral", "sadness": "sad", "surprise": "surprised"} 
+                    speech_synthesizer.speak_text_async("you are " + emotions[max_emotion]).get()
                 else:
-                  speech_synthesizer.speak_text_async("I am sorry! I can't help you with that question. Try to ask me about the mission, inclusivity, Jump Start, etc.").get()
+                  answer = misc_question(user_response)
+                  print(answer)
+                  speech_synthesizer.speak_text_async(answer).get()
             else:
                 # Synthesizes the received text to speech.
                 # The synthesized speech is expected to be heard on the speaker with this line executed.

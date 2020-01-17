@@ -4,9 +4,9 @@ import os
 
 load_dotenv()
 
-wolframalpha_key = os.getenv("WOLF_KEY")
-client = wolframalpha.Client(wolframalpha_key)
+def misc_question(user_response):
+    wolframalpha_key = os.getenv("WOLF_KEY")
+    client = wolframalpha.Client(wolframalpha_key)
 
-res = client.query('2 + 2')
-
-print(next(res.results).text)
+    res = client.query(user_response)
+    return next(res.results).text
