@@ -68,7 +68,6 @@ def non_ada_response():
     if(idx != -1):
         take_picture()
         info = process_picture()
-        print(info)
     if(idx == 0):
         if (info == []):
             error_handler()
@@ -77,11 +76,11 @@ def non_ada_response():
     elif(idx == 1):
         if (info == []):
             error_handler()
-        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]) and info[0]["faceAttributes"]["makeup"]["eyeMakeup"]:
+        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True) and info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True:
             speech_synthesizer.speak_text_async("your eye makeup and lipstick are lovely!")
-        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"]):
+        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True):
             speech_synthesizer.speak_text_async("your eye makeup is wonderful!")
-        elif(info[0]["faceAttributes"]["makeup"]["lipstick"]):
+        elif(info[0]["faceAttributes"]["makeup"]["lipMakeup"] == True):
             speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
         else:
             speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
@@ -99,7 +98,6 @@ def non_ada_response():
             speech_synthesizer.speak_text_async("you are " + emotions[max_emotion]).get()
     else:
         answer = misc_question(user_response)
-        print(answer)
         if (answer == []):
             error_handler()
         else:
