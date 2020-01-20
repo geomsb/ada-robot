@@ -75,7 +75,6 @@ def non_ada_response():
         if (info == []):
             error_handler()
         else:
-          
             speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + ", you look very young!").get()
     elif(idx == 1):
         if (info == []):
@@ -121,7 +120,7 @@ while(i==True):
     blue_on()
     user_input = speech_recognizer.recognize_once()
     user_response = user_input.text.lower()
-    blue_off()
+    all_off()
     print(user_response)
     if(user_response!='bye.'):
         if(user_response=='thanks.' or user_response=='thank you.'):
@@ -130,7 +129,7 @@ while(i==True):
         else:
             magenta_on
             general_response()
-            magenta_off 
+            all_off 
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
