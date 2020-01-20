@@ -8,12 +8,12 @@ load_dotenv()
 subscription_key = os.getenv("SUBSCRIPTION_KEY")
 
 def take_picture():
-    cap = cv2.VideoCapture(0)
-    ret, frame = cap.read()
-    cap.release()
-    name = '/Users/georginasanchez/repos/Ada/ada-robot/img/geomsb.jpeg'
-    picture = frame.copy()
-    cv2.imwrite(name, frame)
+    picture_api_url = 'http://georginapi:5000/picture'
+    api_response = requests.get(picture_api_url, stream=True)
+    with open('img/geomsb.jpeg', 'wb') as out_file:
+        shutil.copyfileobj(api_response.raw, out_file)
+    del api_response
+
 
 def process_picture():
     face_api_url = 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect'
