@@ -2,6 +2,7 @@ import cv2
 from dotenv import load_dotenv
 import requests
 import os
+import shutil
 
 load_dotenv()
 
