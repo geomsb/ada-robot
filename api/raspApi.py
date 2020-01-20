@@ -1,6 +1,7 @@
 import flask
 import RPi.GPIO as GPIO
 from flask import request
+from flask import send_file
 import cv2
 
 app = flask.Flask(__name__)
@@ -60,10 +61,10 @@ def take_picture():
     cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
     cap.release()
-    name = './img/geomsb.jpeg'
+    name = 'img/geomsb.jpeg'
     picture = frame.copy()
     cv2.imwrite(name, frame)
-    return "si sirve"
+    return send_file('../img/geomsb.jpeg', mimetype='image/jpeg')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
