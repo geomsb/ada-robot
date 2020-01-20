@@ -68,6 +68,7 @@ def take_picture():
     cap.release()
     name = 'img/geomsb.jpeg'
     picture = frame.copy()
+    frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
     cv2.imwrite(name, frame)
     return send_file('../img/geomsb.jpeg', mimetype='image/jpeg')
 
