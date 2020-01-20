@@ -17,7 +17,9 @@ import cv2
 from chatBot import create_response
 from pictureProcess import take_picture, process_picture
 from miscQuestions import misc_question
-
+import sys, time
+import RPi.GPIO as GPIO
+from adaLed import turn_on, turn_off, white_on, white_off, blue_on, blue_off, magenta_on, magenta_off
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
@@ -66,12 +68,15 @@ def ada_response():
 def non_ada_response():
     idx, response_text = create_response(user_response, 'userQuestions.txt')
     if(idx != -1):
+        white_on()
         take_picture()
         info = process_picture()
+        white_off()
     if(idx == 0):
         if (info == []):
             error_handler()
         else:
+          
             speech_synthesizer.speak_text_async("you look like" + str(round(info[0]["faceAttributes"]["age"])) + ", you look very young!").get()
     elif(idx == 1):
         if (info == []):
