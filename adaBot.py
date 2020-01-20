@@ -18,7 +18,7 @@ from chatBot import create_response
 from pictureProcess import take_picture, process_picture
 from miscQuestions import misc_question
 import sys, time
-from adaLed import white_on, all_off, blue_on, magenta_on
+from adaLed import white_on, all_off, blue_on, magenta_on, green_on
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
@@ -31,7 +31,9 @@ speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
 
 def error_handler():
+    green_on()
     speech_synthesizer.speak_text_async("I am sorry! I can't help you with that question. Try to ask me about the mission, inclusivity, Jump Start, etc.")
+    all_off()
 
 def ada_response():
     idx, response_text = create_response(user_response, 'adaInfo.txt')

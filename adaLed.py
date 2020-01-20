@@ -10,6 +10,9 @@ def white_on():
 def blue_on():
     set_led("blue")
 
+def green_on():
+    set_led("green")
+
 def magenta_on():
     set_led("magenta")
 

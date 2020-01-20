@@ -42,6 +42,10 @@ def magenta_on():
     turn_on(blue_pin)
     turn_off(green_pin)
 
+def green_on():
+    turn_off(blue_pin)
+    turn_off(red_pin)
+    turn_on(green_pin)
 
 @app.route('/led', methods=['POST'])
 def led_on():
@@ -49,6 +53,8 @@ def led_on():
     if(content["color"] == "white"):
         white_on()
     elif(content["color"] == "blue"):
+        blue_on()
+    elif(content["color"] == "green"):
         blue_on()
     elif(content["color"] == "magenta"):
         magenta_on()
