@@ -11,7 +11,6 @@ red_pin   = 11
 green_pin = 13
 blue_pin  = 15
 
-
 def turn_on(pin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
@@ -55,7 +54,7 @@ def led_on():
     elif(content["color"] == "blue"):
         blue_on()
     elif(content["color"] == "green"):
-        blue_on()
+        green_on()
     elif(content["color"] == "magenta"):
         magenta_on()
     elif(content["color"] == "off"):

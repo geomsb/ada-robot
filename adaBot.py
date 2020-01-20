@@ -42,7 +42,7 @@ def ada_response():
     elif (idx == 1):
         speech_synthesizer.speak_text_async("The program combines classroom training and a paid learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career).") 
     elif (idx == 2):
-        speech_synthesizer.speak_text_async("Our inclusivity is showed on students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience.") 
+        speech_synthesizer.speak_text_async("Our inclusivity is showed on students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience.")
     elif (idx == 3):
         speech_synthesizer.speak_text_async("Augusta Ada Lovelace was a 19th-century mathematician and she is considered the founder of computer science.")
     elif (idx == 4):
