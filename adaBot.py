@@ -118,15 +118,19 @@ i=True
 all_off()
 result = speech_synthesizer.speak_text_async("My name is AdaRobot and my pronouns are she and her. I will try to answer your questions about Ada Developers Academy or any other topic. I can also see you, so you can ask me about your age, accessories, and feelings. If you want to exit, say thanks or thank you").get()
 while(i==True):
+    blue_on()
     user_input = speech_recognizer.recognize_once()
     user_response = user_input.text.lower()
+    blue_off()
     print(user_response)
     if(user_response!='bye.'):
         if(user_response=='thanks.' or user_response=='thank you.'):
             i=False
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
         else:
-            general_response() 
+            magenta_on
+            general_response()
+            magenta_off 
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
