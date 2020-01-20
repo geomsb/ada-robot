@@ -18,8 +18,7 @@ from chatBot import create_response
 from pictureProcess import take_picture, process_picture
 from miscQuestions import misc_question
 import sys, time
-import RPi.GPIO as GPIO
-from adaLed import turn_on, turn_off, white_on, white_off, blue_on, blue_off, magenta_on, magenta_off
+from adaLed import white_on, all_off, blue_on, magenta_on
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
@@ -71,7 +70,7 @@ def non_ada_response():
         white_on()
         take_picture()
         info = process_picture()
-        white_off()
+        all_off()
     if(idx == 0):
         if (info == []):
             error_handler()
@@ -116,6 +115,7 @@ def general_response():
         ada_response()
 
 i=True
+all_off()
 result = speech_synthesizer.speak_text_async("My name is AdaRobot and my pronouns are she and her. I will try to answer your questions about Ada Developers Academy or any other topic. I can also see you, so you can ask me about your age, accessories, and feelings. If you want to exit, say thanks or thank you").get()
 while(i==True):
     user_input = speech_recognizer.recognize_once()
