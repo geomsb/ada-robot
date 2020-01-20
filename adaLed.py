@@ -1,7 +1,7 @@
 import requests
 
 def set_led(color):
-    led_api_url = 'http://georginapi:5000'
+    led_api_url = 'http://georginapi:5000/led'
     api_response = requests.post(led_api_url,  json={"color": color})
 
 def white_on():

@@ -46,9 +46,15 @@ pip3 install requests
 ```
 
 ### Instalation of OpenCV
-Ada robot uses this library to capture an image from the webcam.
+Ada robot uses this library in the Raspberry Pi to capture an image from the webcam.
 ```
-pip3 install opencv-python
+sudo apt install python3-opencv
+```
+
+### Instalation of Flask
+Flask is a lightweight WSGI web application framework. Ada robot uses Flask in the Raspberry Pi to host a web server in order to turn on/off the led and take the picture.
+```
+pip3 install Flask
 ```
 
 ### Instalation of Wolframalpha

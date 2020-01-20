@@ -1,6 +1,7 @@
 import flask
 import RPi.GPIO as GPIO
 from flask import request
+import cv2
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -41,7 +42,7 @@ def magenta_on():
     turn_off(green_pin)
 
 
-@app.route('/', methods=['POST'])
+@app.route('/led', methods=['POST'])
 def led_on():
     content = request.json
     if(content["color"] == "white"):
@@ -54,6 +55,15 @@ def led_on():
         all_off()
     return content["color"]
     
+@app.route('/picture', methods=['GET'])
+def take_picture():
+    cap = cv2.VideoCapture(0)
+    ret, frame = cap.read()
+    cap.release()
+    name = './img/geomsb.jpeg'
+    picture = frame.copy()
+    cv2.imwrite(name, frame)
+    return "si sirve"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
