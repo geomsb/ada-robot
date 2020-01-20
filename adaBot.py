@@ -133,9 +133,9 @@ while(i==True):
             i=False
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
         else:
-            blue_on
+            blue_on()
             general_response()
-            all_off 
+            all_off() 
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
