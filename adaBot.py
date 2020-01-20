@@ -81,12 +81,16 @@ def non_ada_response():
             error_handler()
         elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True) and info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True:
             speech_synthesizer.speak_text_async("your eye makeup and lipstick are lovely!")
+        elif(info[0]["faceAttributes"]["makeup"]["lipMakeup"] == False) and (info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == False):
+            speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
         elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True):
             speech_synthesizer.speak_text_async("your eye makeup is wonderful!")
+        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == False):
+            speech_synthesizer.speak_text_async("it seems that you are not wearing eye makeup!")    
         elif(info[0]["faceAttributes"]["makeup"]["lipMakeup"] == True):
             speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
-        else:
-            speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
+        elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == False):
+            speech_synthesizer.speak_text_async("it seems that you are not wearing lipstick!")
     elif(idx == 2):
         if (info == []):
             error_handler()
@@ -115,9 +119,11 @@ def general_response():
 
 i=True
 all_off()
+blue_on()
 result = speech_synthesizer.speak_text_async("My name is AdaRobot and my pronouns are she and her. I will try to answer your questions about Ada Developers Academy or any other topic. I can also see you, so you can ask me about your age, accessories, and feelings. If you want to exit, say thanks or thank you").get()
+all_off()
 while(i==True):
-    blue_on()
+    magenta_on()
     user_input = speech_recognizer.recognize_once()
     user_response = user_input.text.lower()
     all_off()
@@ -127,7 +133,7 @@ while(i==True):
             i=False
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
         else:
-            magenta_on
+            blue_on
             general_response()
             all_off 
     else:
