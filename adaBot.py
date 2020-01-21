@@ -73,6 +73,7 @@ def non_ada_response():
         white_on()
         take_picture()
         info = process_picture()
+        print(info)
         all_off()
     if(idx == 0):
         if (info == []):
@@ -97,6 +98,8 @@ def non_ada_response():
     elif(idx == 2):
         if (info == []):
             error_handler()
+        elif(info[0]["faceAttributes"]["accessories"] == False):
+            speech_synthesizer.speak_text_async("it seems that you are not wearing accessories").get()
         elif(info[0]["faceAttributes"]["accessories"]):
             speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
     elif(idx == 3):
@@ -135,10 +138,14 @@ while(i==True):
         if(user_response=='thanks.' or user_response=='thank you.'):
             i=False
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
+        elif(user_response==''):
+            green_on()
+            speech_synthesizer.speak_text_async("I am sorry! I could not hear you! Try to ask me about the mission, inclusivity, Jump Start, etc.")
+            all_off()
         else:
             blue_on()
             general_response()
-            all_off() 
+            all_off()
     else:
         i=False
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
