@@ -11,5 +11,3 @@ idx_ans = { 0:"The mission of Ada Developers Academy is to diversify tech by pro
             10:"The application window opens approximately six months prior to the start of the cohort for about a three-week duration, it includes 4 parts: online application, code challenge, technical interview, and in-person/virtual interview, all phases after the application are by invitation only.",
             11:"There is financial support for students who need assistance covering their living expenses during the Ada lectures portion, we offer a low-interest loan through our lending partner, Craft3.",
             12:"You can donate at the website or by mail, please make checks payable to TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670."}
-
-print(idx_ans[5])

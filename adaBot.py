@@ -43,27 +43,27 @@ def ada_response():
     elif (idx == 1):
         speech_synthesizer.speak_text_async(idx_ans[1]) 
     elif (idx == 2):
-        speech_synthesizer.speak_text_async("Our inclusivity is showed on students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience.")
+        speech_synthesizer.speak_text_async(idx_ans[2])
     elif (idx == 3):
-        speech_synthesizer.speak_text_async("Augusta Ada Lovelace was a 19th-century mathematician and she is considered the founder of computer science.")
+        speech_synthesizer.speak_text_async(idx_ans[3])
     elif (idx == 4):
-        speech_synthesizer.speak_text_async("The Jump Start Live is for students who need extra support and it starts one month before the classes start and the Jump Start Curriculum must be completed by our students prior to their first day at Ada the content covers foundational concepts such as the basics of coding languages and getting comfortable with tools.")
+        speech_synthesizer.speak_text_async(idx_ans[4])
     elif (idx == 5):
-        speech_synthesizer.speak_text_async("The classroom experience consists of 8 hours a day, 5 days a week for 24 weeks, the curriculum is divided up into one-week units, and each week features a project that reinforces that week’s learning objectives.")
+        speech_synthesizer.speak_text_async(idx_ans[5])
     elif (idx == 6):
-        speech_synthesizer.speak_text_async("A capstone project is created by or students in order to show what they have learned.")
+        speech_synthesizer.speak_text_async(idx_ans[6])
     elif (idx == 7):
-        speech_synthesizer.speak_text_async("The advocacy of the program includes workshops focused on justice, bias intervention, and inclusive community therefore our Adies are not only trained to be strong developers but also strong advocates.")
+        speech_synthesizer.speak_text_async(idx_ans[7])
     elif (idx == 8):
-        speech_synthesizer.speak_text_async("The internship will be performed during the second part of the course, students will participate in an interview week where they will interview with six companies and they will be placed with one of the companies.")
+        speech_synthesizer.speak_text_async(idx_ans[8])
     elif (idx == 9):
-        speech_synthesizer.speak_text_async("You can apply if you have permanent work authorization in the United States and if you are able to participate for the full duration of the program, which is full-time, Monday through Friday.")
+        speech_synthesizer.speak_text_async(idx_ans[9])
     elif (idx == 10):
-        speech_synthesizer.speak_text_async("The application window opens approximately six months prior to the start of the cohort for about a three-week duration, it includes 4 parts: online application, code challenge, technical interview, and in-person/virtual interview, all phases after the application are by invitation only.")
+        speech_synthesizer.speak_text_async(idx_ans[10])
     elif (idx == 11):
-        speech_synthesizer.speak_text_async("There is financial support for students who need assistance covering their living expenses during the Ada lectures portion, we offer a low-interest loan through our lending partner, Craft3.")
+        speech_synthesizer.speak_text_async(idx_ans[11])
     elif (idx == 12):
-        speech_synthesizer.speak_text_async("You can donate at the website or by mail, please make checks payable to TSNE/Ada Developers Academy Mailing address: Third Sector New England, Inc. ATTN: Ada Developers Academy 89 South Street, Suite 700 Boston, MA 02111-2670.")
+        speech_synthesizer.speak_text_async(idx_ans[12])
     else:
         error_handler()
 
