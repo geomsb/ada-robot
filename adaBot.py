@@ -90,20 +90,20 @@ def non_ada_response():
         elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == True):
             speech_synthesizer.speak_text_async("your eye makeup is wonderful!")
         elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == False):
-            speech_synthesizer.speak_text_async("it seems that you are not wearing eye makeup!")    
+            speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")    
         elif(info[0]["faceAttributes"]["makeup"]["lipMakeup"] == True):
             speech_synthesizer.speak_text_async("your lipstick color is beautiful!")
         elif(info[0]["faceAttributes"]["makeup"]["eyeMakeup"] == False):
-            speech_synthesizer.speak_text_async("it seems that you are not wearing lipstick!")
+            speech_synthesizer.speak_text_async("it seems that you are not wearing makeup!")
     elif(idx == 2):
         if (info == []):
             error_handler()
         elif(info[0]["faceAttributes"]["accessories"] == False):
             speech_synthesizer.speak_text_async("it seems that you are not wearing accessories").get()
-        elif(info[0]["faceAttributes"]["accessories"] == "headwear"):
+        elif(info[0]["faceAttributes"]["accessories"][0]["type"] == "headwear"):
             speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " is so cool!").get()
-        elif(info[0]["faceAttributes"]["accessories"] == "glasses"):
-            speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " is so cool!").get()
+        elif(info[0]["faceAttributes"]["accessories"][0]["type"] == "glasses"):
+            speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
     elif(idx == 3):
         if (info == []):
             error_handler()
