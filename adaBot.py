@@ -100,8 +100,10 @@ def non_ada_response():
             error_handler()
         elif(info[0]["faceAttributes"]["accessories"] == False):
             speech_synthesizer.speak_text_async("it seems that you are not wearing accessories").get()
-        elif(info[0]["faceAttributes"]["accessories"]):
-            speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " are so cool!").get()
+        elif(info[0]["faceAttributes"]["accessories"] == "headwear"):
+            speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " is so cool!").get()
+        elif(info[0]["faceAttributes"]["accessories"] == "glasses"):
+            speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " is so cool!").get()
     elif(idx == 3):
         if (info == []):
             error_handler()
