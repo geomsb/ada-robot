@@ -19,6 +19,7 @@ from pictureProcess import take_picture, process_picture
 from miscQuestions import misc_question
 import sys, time
 from adaLed import white_on, all_off, blue_on, magenta_on, green_on
+from idxResp import idx_ans
 load_dotenv()
 
 key = os.getenv("SPEECH_KEY")
@@ -38,9 +39,9 @@ def error_handler():
 def ada_response():
     idx, response_text = create_response(user_response, 'adaInfo.txt')
     if (idx == 0):
-        speech_synthesizer.speak_text_async("The mission of Ada Developers Academy is to diversify tech by providing women and gender diverse people the skills, experience, and community support to become professional software developers to change the face of tech, Ada Developers Academy is a non-profit, tuition-free coding school for women and gender diverse adults.")
+        speech_synthesizer.speak_text_async(idx_ans[0])
     elif (idx == 1):
-        speech_synthesizer.speak_text_async("The program combines classroom training and a paid learning internship to teach our students both how to write code (practical tools and computer science fundamentals) and how to be a software developer (leadership, inclusivity, and career).") 
+        speech_synthesizer.speak_text_async(idx_ans[1]) 
     elif (idx == 2):
         speech_synthesizer.speak_text_async("Our inclusivity is showed on students, staff, volunteers, TA’s, and reps from our sponsor companies come to Ada Developers Academy with an incredible diversity of identity and experience.")
     elif (idx == 3):
