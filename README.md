@@ -1,3 +1,33 @@
+# Ada Robot
+
+Ada robot project is a great oportunity to learn about chatbots, Microsoft Azure cognitive services API, wolframalpha API and how to use the Raspberry Pi.
+
+## Feature Set
+
+1.  Ada robot can chat with you.
+1.  Ada robot can hear you.
+1.  Ada robot can talk to you.
+1.  Ada robot can see you and take a picture.
+1.  Ada robot can tell you your emotions.
+1.  Ada robot can tell you about your accessories.
+1.  Ada robot can tell you about your makeup.
+1.  Ada robot turn on a LED with an specific color deppending on the following:
+      When she talks the LED will be blue.
+      When she hear the LED will be magenta.
+      When she does not know the answer the LED will be green.
+1.  Ada robot has a 3D printed face.
+
+## Technology Choices
+
+- Raspberry Pi
+- Python
+- Azure cognitive services API
+  - Azure face API
+  - Azure text to speech API
+  - Azure speech to text API
+- Wolframalpha API
+- Flask
+
 ## Pre-requisites
 ### Instalation of Python
 ```

@@ -98,7 +98,7 @@ def non_ada_response():
     elif(idx == 2):
         if (info == []):
             error_handler()
-        elif(info[0]["faceAttributes"]["accessories"] == False):
+        elif(not info[0]["faceAttributes"]["accessories"]):
             speech_synthesizer.speak_text_async("it seems that you are not wearing accessories").get()
         elif(info[0]["faceAttributes"]["accessories"][0]["type"] == "headwear"):
             speech_synthesizer.speak_text_async("your " + str(info[0]["faceAttributes"]["accessories"][0]["type"]) + " is so cool!").get()
@@ -139,7 +139,9 @@ while(i==True):
     if(user_response!='bye.'):
         if(user_response=='thanks.' or user_response=='thank you.'):
             i=False
+            blue_on()
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
+            all_off
         elif(user_response==''):
             green_on()
             speech_synthesizer.speak_text_async("I am sorry! I could not hear you! Try to ask me about the mission, inclusivity, Jump Start, etc.")
@@ -150,5 +152,6 @@ while(i==True):
             all_off()
     else:
         i=False
+        blue_on()
         result = speech_synthesizer.speak_text_async("Bye! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
-        
+        all_off()
