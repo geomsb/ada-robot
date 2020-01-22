@@ -141,7 +141,7 @@ while(i==True):
             i=False
             blue_on()
             speech_synthesizer.speak_text_async("You are welcome! Thanks for comming to our presentation and for supporting Ada Developers Academy!").get()
-            all_off
+            all_off()
         elif(user_response==''):
             green_on()
             speech_synthesizer.speak_text_async("I am sorry! I could not hear you! Try to ask me about the mission, inclusivity, Jump Start, etc.")
