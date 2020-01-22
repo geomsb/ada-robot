@@ -1,6 +1,6 @@
 # Ada Robot
 
-Ada robot project is a great oportunity to learn about chatbots, Microsoft Azure cognitive services API, wolframalpha API and how to use the Raspberry Pi.
+Ada robot project is a great opportunity to learn about chatbots, Microsoft Azure cognitive services API, Wolframalpha API and how to use the Raspberry Pi.
 
 ## Feature Set
 
@@ -11,9 +11,9 @@ Ada robot project is a great oportunity to learn about chatbots, Microsoft Azure
 1.  Ada robot can tell you your emotions.
 1.  Ada robot can tell you about your accessories.
 1.  Ada robot can tell you about your makeup.
-1.  Ada robot turn on a LED with an specific color deppending on the following:
+1.  Ada robot turn on a LED with a specific color depending on the following:
       When she talks the LED will be blue.
-      When she hear the LED will be magenta.
+      When she hears the LED will be magenta.
       When she does not know the answer the LED will be green.
 1.  Ada robot has a 3D printed face.
 
@@ -29,7 +29,7 @@ Ada robot project is a great oportunity to learn about chatbots, Microsoft Azure
 - Flask
 
 ## Pre-requisites
-### Instalation of Python
+### Installation of Python
 ```
 brew install python
 ```
@@ -38,25 +38,25 @@ brew install python
 
 NLTK was a platform used to create Ada Robot. It provides a lot of text processing libraries that helped with the tokenization, lemmatization, etc.
 
-### Instalation of NLTK
+### Installation of NLTK
 ```
 pip3 install nltk
 ```
 
-### Instalation of NumPy
+### Installation of NumPy
 NumPy is the fundamental package for scientific computing with Python.
 
 ```
 pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 ```
 
-### Instalation of Scikit-learn
+### Installation of Scikit-learn
 Scikit-learn is a Python module for machine learning.
 ```
 pip3 install -U scikit-learn
 ```
 
-### Instalation of Azure Cognitive Services
+### Installation of Azure Cognitive Services
 Ada Robot uses the Text to Speech and Speech to text Azure Services.
 ```
 pip3 install --upgrade azure-cognitiveservices-speech
@@ -69,31 +69,31 @@ pip3 install --upgrade azure-cognitiveservices-speech
 
 https://azure.microsoft.com/en-us/free/
 
-### Instalation of Request
+### Installation of Requests
 Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. 
 ```
 pip3 install requests
 ```
 
-### Instalation of OpenCV
+### Installation of OpenCV
 Ada robot uses this library in the Raspberry Pi to capture an image from the webcam.
 ```
 sudo apt install python3-opencv
 ```
 
-### Instalation of Flask
+### Installation of Flask
 Flask is a lightweight WSGI web application framework. Ada robot uses Flask in the Raspberry Pi to host a web server in order to turn on/off the led and take the picture.
 ```
 pip3 install Flask
 ```
 
-### Instalation of Wolframalpha
+### Installation of Wolframalpha
 Ada robot uses this library to answer questions if it does not find them with the chatbot process.
 ```
 pip3 install wolframalpha
 ```
 
-### Instalation of required packages
+### Installation of required packages
 After NLTK has been downloaded, install required packages
 ```python
 import nltk
