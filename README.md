@@ -1,6 +1,6 @@
 # Ada Robot
 
-Ada robot project is a great opportunity to learn about chatbots, Microsoft Azure cognitive services API, Wolframalpha API and how to use the Raspberry Pi.
+I created this project to learn about chatbots, Microsoft Azure cognitive services API, Wolframalpha API and how to use the Raspberry Pi.
 
 ## Feature Set
 
